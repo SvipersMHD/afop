@@ -706,6 +706,7 @@ export interface ApiPokemonListPokemonList extends Schema.CollectionType {
     singularName: 'pokemon-list';
     pluralName: 'pokemon-lists';
     displayName: 'pokemon-list';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -737,16 +738,16 @@ export interface ApiTextcontentTextcontent extends Schema.SingleType {
     singularName: 'textcontent';
     pluralName: 'textcontents';
     displayName: 'textcontent';
+    description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     title: Attribute.String;
     explication: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::textcontent.textcontent',
       'oneToOne',

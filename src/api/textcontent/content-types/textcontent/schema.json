@@ -4,10 +4,11 @@
   "info": {
     "singularName": "textcontent",
     "pluralName": "textcontents",
-    "displayName": "textcontent"
+    "displayName": "textcontent",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
