@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "textcontents",
+  "info": {
+    "singularName": "textcontent",
+    "pluralName": "textcontents",
+    "displayName": "textcontent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "explication": {
+      "type": "text"
+    }
+  }
+}
