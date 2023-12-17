@@ -706,7 +706,6 @@ export interface ApiPokemonListPokemonList extends Schema.CollectionType {
     singularName: 'pokemon-list';
     pluralName: 'pokemon-lists';
     displayName: 'pokemon-list';
-    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -714,7 +713,7 @@ export interface ApiPokemonListPokemonList extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     imagePokemon: Attribute.Media;
-    Available: Attribute.Integer & Attribute.DefaultTo<0>;
+    available: Attribute.Integer & Attribute.DefaultTo<0>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -725,6 +724,35 @@ export interface ApiPokemonListPokemonList extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::pokemon-list.pokemon-list',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTestimgTestimg extends Schema.SingleType {
+  collectionName: 'testimgs';
+  info: {
+    singularName: 'testimg';
+    pluralName: 'testimgs';
+    displayName: 'testimg';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    img: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::testimg.testimg',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::testimg.testimg',
       'oneToOne',
       'admin::user'
     > &
@@ -781,6 +809,7 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::form.form': ApiFormForm;
       'api::pokemon-list.pokemon-list': ApiPokemonListPokemonList;
+      'api::testimg.testimg': ApiTestimgTestimg;
       'api::textcontent.textcontent': ApiTextcontentTextcontent;
     }
   }

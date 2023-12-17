@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "testimgs",
+  "info": {
+    "singularName": "testimg",
+    "pluralName": "testimgs",
+    "displayName": "testimg"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
