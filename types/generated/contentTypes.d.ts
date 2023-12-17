@@ -714,7 +714,7 @@ export interface ApiPokemonListPokemonList extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     imagePokemon: Attribute.Media;
-    available: Attribute.Integer & Attribute.DefaultTo<0>;
+    Available: Attribute.Integer & Attribute.DefaultTo<0>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
