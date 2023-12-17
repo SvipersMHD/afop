@@ -1,20 +1,20 @@
 {
   "kind": "collectionType",
-  "collectionName": "tests",
+  "collectionName": "pokemon_lists",
   "info": {
-    "singularName": "test",
-    "pluralName": "tests",
-    "displayName": "test"
+    "singularName": "pokemon-list",
+    "pluralName": "pokemon-lists",
+    "displayName": "pokemon-list"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "name": {
       "type": "string"
     },
-    "imgtest": {
+    "imagePokemon": {
       "allowedTypes": [
         "images",
         "files",
@@ -23,6 +23,10 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "available": {
+      "default": 0,
+      "type": "integer"
     }
   }
 }
