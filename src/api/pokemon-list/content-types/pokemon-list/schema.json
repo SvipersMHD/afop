@@ -4,7 +4,8 @@
   "info": {
     "singularName": "pokemon-list",
     "pluralName": "pokemon-lists",
-    "displayName": "pokemon-list"
+    "displayName": "pokemon-list",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -15,11 +16,12 @@
       "type": "string"
     },
     "imagePokemon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "available": {
       "default": 0,

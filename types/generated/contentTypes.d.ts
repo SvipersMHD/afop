@@ -706,6 +706,7 @@ export interface ApiPokemonListPokemonList extends Schema.CollectionType {
     singularName: 'pokemon-list';
     pluralName: 'pokemon-lists';
     displayName: 'pokemon-list';
+    description: '';
   };
   options: {
     draftAndPublish: false;
