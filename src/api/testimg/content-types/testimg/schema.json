@@ -4,7 +4,8 @@
   "info": {
     "singularName": "testimg",
     "pluralName": "testimgs",
-    "displayName": "testimg"
+    "displayName": "testimg",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -12,14 +13,18 @@
   "pluginOptions": {},
   "attributes": {
     "img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "testnumber": {
+      "type": "integer"
     }
   }
 }

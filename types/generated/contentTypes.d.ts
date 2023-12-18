@@ -737,12 +737,14 @@ export interface ApiTestimgTestimg extends Schema.SingleType {
     singularName: 'testimg';
     pluralName: 'testimgs';
     displayName: 'testimg';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
     img: Attribute.Media;
+    testnumber: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
