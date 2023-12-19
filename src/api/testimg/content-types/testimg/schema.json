@@ -1,5 +1,5 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "testimgs",
   "info": {
     "singularName": "testimg",
@@ -22,9 +22,6 @@
         "videos",
         "audios"
       ]
-    },
-    "testnumber": {
-      "type": "integer"
     }
   }
 }

@@ -732,7 +732,7 @@ export interface ApiPokemonListPokemonList extends Schema.CollectionType {
   };
 }
 
-export interface ApiTestimgTestimg extends Schema.SingleType {
+export interface ApiTestimgTestimg extends Schema.CollectionType {
   collectionName: 'testimgs';
   info: {
     singularName: 'testimg';
@@ -745,7 +745,6 @@ export interface ApiTestimgTestimg extends Schema.SingleType {
   };
   attributes: {
     img: Attribute.Media;
-    testnumber: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
