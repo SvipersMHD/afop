@@ -1,7 +1,7 @@
 module.exports = ({ env }) => ({
   rest: {
-    defaultLimit: 197,
-    maxLimit: 197,
+    defaultLimit: 1,
+    maxLimit: 1,
     withCount: true,
   },
 });
