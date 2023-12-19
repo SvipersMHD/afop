@@ -700,6 +700,35 @@ export interface ApiFormForm extends Schema.CollectionType {
   };
 }
 
+export interface ApiImgdecoImgdeco extends Schema.CollectionType {
+  collectionName: 'imgdecos';
+  info: {
+    singularName: 'imgdeco';
+    pluralName: 'imgdecos';
+    displayName: 'imgdeco';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    img: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::imgdeco.imgdeco',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::imgdeco.imgdeco',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPokemonListPokemonList extends Schema.CollectionType {
   collectionName: 'pokemon_lists';
   info: {
@@ -810,6 +839,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::form.form': ApiFormForm;
+      'api::imgdeco.imgdeco': ApiImgdecoImgdeco;
       'api::pokemon-list.pokemon-list': ApiPokemonListPokemonList;
       'api::testimg.testimg': ApiTestimgTestimg;
       'api::textcontent.textcontent': ApiTextcontentTextcontent;
