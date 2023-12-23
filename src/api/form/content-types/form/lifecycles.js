@@ -18,15 +18,15 @@ module.exports = {
                 // Envoyez l'e-mail de confirmation au client
                 await strapi.plugins['email'].services.email.send({
                     to: clientEmail,
-                    from: 'zohaibadnan29.10@gmail.com',
+                    from: 'noreply.afop@gmail.com',
                     subject: 'Confirmation of your command',
                     text: `Thx for your command: ${orderDetailsText}. We will recontact you as soon as possible`,
                 });
 
                 // Envoyez une notification par e-mail aux propriétaires du site
                 await strapi.plugins['email'].services.email.send({
-                    to: 'zohaibadnan29.10@gmail.com', // Remplacez par l'adresse e-mail des propriétaires
-                    from: 'zohaibadnan29.10@gmail.com',
+                    to: 'luka.szafraniec@gmail.com', // Remplacez par l'adresse e-mail des propriétaires
+                    from: 'noreply.afop@gmail.com',
                     subject: 'New command youhou',
                     text: `New command received from ${clientEmail}. Details: ${orderDetailsText}`, 
                 });
